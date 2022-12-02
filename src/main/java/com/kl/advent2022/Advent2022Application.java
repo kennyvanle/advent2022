@@ -26,6 +26,8 @@ public class Advent2022Application {
     private static void day2() {
         String day2Input = InputParser.getFileContent("day2Input.txt");
         int score = Day2.calculateScore(day2Input);
+        int score2 = Day2.calculateScoreSecretStrategy(day2Input);
         System.out.println("Day 2 total score part 1: " + score);
+        System.out.println("Day 2 total score part 2: " + score2);
     }
 }

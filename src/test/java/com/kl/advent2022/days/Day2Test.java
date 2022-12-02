@@ -12,4 +12,12 @@ public class Day2Test {
                 "C Z";
         Assert.assertEquals(15, Day2.calculateScore(input));
     }
+
+    @Test
+    public void testPart2(){
+        String input = "A Y\n" +
+                "B X\n" +
+                "C Z";
+        Assert.assertEquals(12, Day2.calculateScoreSecretStrategy(input));
+    }
 }
