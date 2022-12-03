@@ -34,6 +34,8 @@ public class Advent2022Application {
     private static void day3() {
         String day3Input = InputParser.getFileContent("day3Input.txt");
         int sum = Day3.calculatePriorities(day3Input);
+        int badgeSum = Day3.calculateBadgePriorities(day3Input);
         System.out.println("Day 3 total sum part 1: " + sum);
+        System.out.println("Day 3 total sum part 2: " + badgeSum);
     }
 }
