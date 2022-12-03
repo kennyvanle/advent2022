@@ -2,6 +2,7 @@ package com.kl.advent2022;
 
 import com.kl.advent2022.days.Day1;
 import com.kl.advent2022.days.Day2;
+import com.kl.advent2022.days.Day3;
 import com.kl.advent2022.utils.InputParser;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,8 +12,7 @@ public class Advent2022Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Advent2022Application.class, args);
-        day2();
-
+        day3();
     }
 
     private static void day1() {
@@ -29,5 +29,11 @@ public class Advent2022Application {
         int score2 = Day2.calculateScoreSecretStrategy(day2Input);
         System.out.println("Day 2 total score part 1: " + score);
         System.out.println("Day 2 total score part 2: " + score2);
+    }
+
+    private static void day3() {
+        String day3Input = InputParser.getFileContent("day3Input.txt");
+        int sum = Day3.calculatePriorities(day3Input);
+        System.out.println("Day 3 total sum part 1: " + sum);
     }
 }
