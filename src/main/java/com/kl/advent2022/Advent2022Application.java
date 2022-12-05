@@ -1,9 +1,6 @@
 package com.kl.advent2022;
 
-import com.kl.advent2022.days.Day1;
-import com.kl.advent2022.days.Day2;
-import com.kl.advent2022.days.Day3;
-import com.kl.advent2022.days.Day4;
+import com.kl.advent2022.days.*;
 import com.kl.advent2022.utils.InputParser;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,7 +10,7 @@ public class Advent2022Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Advent2022Application.class, args);
-        day4();
+        day5();
     }
 
     private static void day1() {
@@ -46,5 +43,11 @@ public class Advent2022Application {
         int countAnyOverlap = Day4.calcAnyOverlap(input);
         System.out.println("Day 4 total count part 1: " + count);
         System.out.println("Day 4 total count part 2: " + countAnyOverlap);
+    }
+
+    private static void day5() {
+        String input = InputParser.getFileContent("day5Input.txt");
+        String top = Day5.findTops(input);
+        System.out.println("Day 5 top: " + top);
     }
 }
