@@ -48,6 +48,8 @@ public class Advent2022Application {
     private static void day5() {
         String input = InputParser.getFileContent("day5Input.txt");
         String top = Day5.findTops(input);
-        System.out.println("Day 5 top: " + top);
+        String top9001 = Day5.findTops9001(input);
+        System.out.println("Day 5 top part 1: " + top);
+        System.out.println("Day 5 top part 2: " + top9001);
     }
 }
