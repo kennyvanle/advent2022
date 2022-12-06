@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class Day6 {
 
-    public static int findFirstMarkerIndex(String input) {
+    public static int findFirstMarkerIndex(String input, int index) {
         int left = 0;
         HashSet<Character> letters = new HashSet<>();
         for(int right = 0; right < input.length(); right++){
@@ -13,7 +13,7 @@ public class Day6 {
                 left++;
             }
             letters.add(input.charAt(right));
-            if(letters.size() == 4){
+            if(letters.size() == index){
                 return right + 1;
             }
         }

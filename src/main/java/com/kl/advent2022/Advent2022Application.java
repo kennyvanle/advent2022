@@ -55,7 +55,9 @@ public class Advent2022Application {
 
     private static void day6() {
         String input = InputParser.getFileContent("day6Input.txt");
-        int firstMarkerIndex = Day6.findFirstMarkerIndex(input);
+        int firstMarkerIndex = Day6.findFirstMarkerIndex(input, 4);
+        int firstMarkerIndex14 = Day6.findFirstMarkerIndex(input, 14);
         System.out.println("Day 6 top part 1: " + firstMarkerIndex);
+        System.out.println("Day 6 top part 2: " + firstMarkerIndex14);
     }
 }
