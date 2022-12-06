@@ -10,7 +10,7 @@ public class Advent2022Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Advent2022Application.class, args);
-        day5();
+        day6();
     }
 
     private static void day1() {
@@ -51,5 +51,11 @@ public class Advent2022Application {
         String top9001 = Day5.findTops9001(input);
         System.out.println("Day 5 top part 1: " + top);
         System.out.println("Day 5 top part 2: " + top9001);
+    }
+
+    private static void day6() {
+        String input = InputParser.getFileContent("day6Input.txt");
+        int firstMarkerIndex = Day6.findFirstMarkerIndex(input);
+        System.out.println("Day 6 top part 1: " + firstMarkerIndex);
     }
 }
