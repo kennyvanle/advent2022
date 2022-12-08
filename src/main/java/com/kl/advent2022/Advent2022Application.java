@@ -10,7 +10,7 @@ public class Advent2022Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Advent2022Application.class, args);
-        day6();
+        day7();
     }
 
     private static void day1() {
@@ -59,5 +59,11 @@ public class Advent2022Application {
         int firstMarkerIndex14 = Day6.findFirstMarkerIndex(input, 14);
         System.out.println("Day 6 top part 1: " + firstMarkerIndex);
         System.out.println("Day 6 top part 2: " + firstMarkerIndex14);
+    }
+
+    private static void day7() {
+        String input = InputParser.getFileContent("day7Input.txt");
+        int sumBelowThreshold = Day7.calculateSumOfDirectoriesBelowThreshold(input, 100000);
+        System.out.println("Day 7 part 1: " + sumBelowThreshold);
     }
 }
